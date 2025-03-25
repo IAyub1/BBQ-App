@@ -11,3 +11,5 @@ The app was designed and prototyped using [Figma](https://www.figma.com/).
 ## Project Management
 
 The application was planned and designed with the help of GitHub projects. 
+
+## User stories
