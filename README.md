@@ -12,4 +12,4 @@ The app was designed and prototyped using [Figma](https://www.figma.com/).
 
 The application was planned and designed with the help of GitHub projects. 
 
-## User stories
+## User Stories
