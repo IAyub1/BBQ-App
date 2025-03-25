@@ -1,33 +1,124 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <title>BBQ App</title>
-    <meta name="author" content="Ismael Ayub" />
-    <meta name="description" content="When is the best day to do a BBQ." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BBQ App</title>
 </head>
-
 <body>
-    <header>
-        <hr>
-        <h1>BBQ App</h1>
-        <hr>
-    </header>
-
-    <h2>17/03/2025</h2>
-
-    <section class="about_app">
-        <h3>About App</h3>
-        <p>
-            This is the BBQ App 
-        </p>
-    </section>
-
-    <footer>
-        <small>Copyright &#169; <cite>Ismael Ayub</cite></small>
-    </footer>
+<div class="app-container">
+<h1>BBQ App</h1>
+ 
+    <!-- Location input -->
+<label for="location-input">Enter Location</label>
+<input type="text" id="location-input" value="London" />
+ 
+    <br />
+<button id="forecast-button">Check BBQ Forecast</button>
+ 
+    <!-- Timer input -->
+<label for="timer-input">Timer</label>
+<input type="time" id="timer-input" value="05:00"/>
+ 
+    <br />
+<!-- <button id="set-timer-button">
+      Set Timer <img src="https://cdn-icons-png.flaticon.com/512/2088/2088617.png" alt="Timer Icon" />
+</button> -->
+ 
+<div id="weather"> </div>
+</div>
+ 
+  <script>
+    var forecastButton2 = document.getElementById("forecast-button");
+    var locationInput2 = document.getElementById("location-input");
+ 
+    // Replace with your actual OpenWeather API key
+ 
+ 
+    // Mapping weather codes to BBQ-friendly or not
+    // const bbqFriendlyWeather = [
+    //   "Clear",
+    //   "Clouds" // You can make this more specific if needed (like only "few clouds")
+    // ];
+ 
+    forecastButton2.addEventListener("click", async () => {
+      var city = locationInput2.value;
+ 
+       const API_KEY = '5ef53af545dd04589b5c843faae7edef';
+ 
+      if (!city) {
+        alert("Please enter a city.");
+        return;
+      }
+ 
+      try {
+        // getting the city co-ords
+        const response2 = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&&appid=${API_KEY}`);
+        if (!response2.ok) throw new Error
+            ("City not found");
+        // if (!response.ok) throw new Error("City not found");
+        const data2 = await response2.json();
+ 
+        const lat = data2[0].lat;
+        const lon = data2[0].lon;
+ 
+        // Getting the weather from the api
+ 
+        const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&units=metric&cnt=5&appid=${API_KEY}`);
+        
+        const data = await response.json();
+        
+ 
+        // Getting Date and Converting to Weekday
+ 
+        
+        const date1 = new Date( 1000 *data.list[0].dt);
+        const day1 = date1.toLocaleDateString('en-us', {weekday:'short'});
+        const day1Weather = data.list[0].temp;
+ 
+        
+        const date2 = new Date( 1000 *data.list[1].dt);
+        const day2 = date2.toLocaleDateString('en-us', {weekday:'short'});
+        const day2Weather = data.list[1].temp;
+        
+ 
+ 
+        const date3 = new Date( 1000 *data.list[2].dt);
+        const day3 = date3.toLocaleDateString('en-us', {weekday:'short'});
+        const day3Weather = data.list[2].temp;
+ 
+ 
+        const date4 = new Date( 1000 *data.list[3].dt);
+        const day4 = date4.toLocaleDateString('en-us', {weekday:'short'});
+        const day4Weather = data.list[3].temp;
+ 
+ 
+        const date5 = new Date( 1000 *data.list[4].dt);
+        const day5 = date5.toLocaleDateString('en-us', {weekday:'short'});
+        const day5Weather = data.list[4].temp;
+ 
+        console.log(day1Weather.day);
+        console.log(day2Weather.day);
+        console.log(day3Weather.day);
+        console.log(day4Weather.day);
+        console.log(day5Weather.day);
+ 
+        const weather = document.getElementById("weather");
+        weather.innerHTML =
+        `<ul>
+            <li> ${day1} on  ${day1Weather.day} </li>
+            <li>  ${day2} on ${day2Weather.day}</li>
+            <li>  ${day3} on ${day3Weather.day}</li>
+            <li>  ${day4} on ${day4Weather.day}</li>
+            <li>  ${day5} on ${day5Weather.day}</li>
+        <ul>`
+ 
+ 
+      } catch (error) {
+        console.error(error);
+        alert("Failed to fetch weather. Please check the city name.");
+      }
+    });
+</script>
 </body>
-
 </html>
