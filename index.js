@@ -8,14 +8,8 @@ document.getElementById("forecast-button").addEventListener("click", async () =>
     }
 
     try {
-        const response2 = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`);
-        if (!response2.ok) throw new Error("City not found");
-        const data2 = await response2.json();
-
-        const lat = data2[0].lat;
-        const lon = data2[0].lon;
-
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&units=metric&cnt=5&appid=${API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=metric&cnt=5&appid=${API_KEY}`);
+        if (!response.ok) throw new Error("City not found");
         const data = await response.json();
 
         const weatherData = {
