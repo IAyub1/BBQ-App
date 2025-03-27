@@ -8,7 +8,7 @@ document.getElementById("forecast-button").addEventListener("click", async () =>
     }
 
     try {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=metric&cnt=5&appid=${API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=metric&cnt=5&appid=${API_KEY}`);
         if (!response.ok) throw new Error("City not found");
         const data = await response.json();
 
