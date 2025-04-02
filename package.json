@@ -4,7 +4,7 @@
   "description": "This is a web application that gets data from the API then creates a website ..",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
