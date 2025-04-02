@@ -1,0 +1,22 @@
+{
+  "name": "bbq-app",
+  "version": "1.0.0",
+  "description": "This is a web application that gets data from the API then creates a website ..",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAyub1/BBQ-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IAyub1/BBQ-App/issues"
+  },
+  "homepage": "https://github.com/IAyub1/BBQ-App#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
