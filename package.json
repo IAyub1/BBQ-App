@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/IAyub1/BBQ-App/issues"
   },
-  "homepage": "https://github.com/IAyub1/BBQ-App#readme"
+  "homepage": "https://github.com/IAyub1/BBQ-App#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
