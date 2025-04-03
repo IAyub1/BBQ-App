@@ -4,8 +4,11 @@ document.getElementById("forecast-button").addEventListener("click", async () =>
 
     if (!city) {
         alert("Please enter a city.");
-        return;}
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=metric&cnt=5&appid=${API_KEY}`);
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast/daily?q=${city}&units=metric&cnt=5&appid=${API_KEY}`);
         if (!response.ok) throw new Error("City not found");
         const data = await response.json();
 
@@ -20,9 +23,23 @@ document.getElementById("forecast-button").addEventListener("click", async () =>
             day4Weather: data.list[3].temp,
             day5: new Date(1000 * data.list[4].dt).toLocaleDateString('en-us', { weekday: 'short' }),
             day5Weather: data.list[4].temp
-        }
+        };
 
-    
-    localStorage.setItem("weatherData", JSON.stringify(weatherData));
-    window.location.href = "forecast.html";
-})
+        localStorage.setItem("weatherData", JSON.stringify(weatherData));
+        window.location.href = "forecast.html";
+    } catch (error) {
+        console.error(error);
+        alert("Failed to fetch weather. Please check the city name.");
+    }
+});
+
+document.getElementById("timer-button").addEventListener("click", () => {
+    const timerValue = document.getElementById("timer-input").value;
+    if (!timerValue) {
+        alert("Please set a timer.");
+        return;
+    }
+
+    localStorage.setItem("timerValue", timerValue);
+    window.location.href = "timer.html";
+});
