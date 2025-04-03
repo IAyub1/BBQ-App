@@ -38,14 +38,34 @@ When I search for a location
 
 Then the app should display the current location I am in.
 
-
-
-
 User Story 2: Input a time
+
+Given I'm a user
+
+When I want to select a time for my BBQ
+
+Then the app will take me to a page 
+
+So that I can view the timer
 
 User Story 3: View 5 day BBQ forecast they inputted
 
+Given I'm a user
+
+When I click on "Get Forecast"
+
+Then i can see a 5-day weather forecast for that location
+
 User Story 4: View the timer countdown amd make a sound when it reaches 0 
+
+Given I'm a user
+
+When I have set a countdown timer for my BBQ 
+
+And the timer reaches zero
+
+Then the app should play a sound to notify me  
+
 
 
 
