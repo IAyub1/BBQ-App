@@ -32,6 +32,15 @@ User stories are short, simple descriptions of a feature from the perspective of
 
 User Story 1: Ability to view location
 
+Given I'm a user
+
+When I search for a location 
+
+Then the app should display the current location I am in.
+
+
+
+
 User Story 2: Input a time
 
 User Story 3: View 5 day BBQ forecast they inputted
