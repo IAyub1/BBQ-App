@@ -26,6 +26,19 @@ Validation
 
 - Ensure valid city names have been input in search bar
 
+## User Stories
+
+User stories are short, simple descriptions of a feature from the perspective of the person who needs it. They help people involved understand what users want and why it matters, keeping the focus on real human needs.
+
+User Story 1: Ability to view location
+
+User Story 2: Input a time
+
+User Story 3: View 5 day BBQ forecast they inputted
+
+User Story 4: View the timer countdown amd make a sound when it reaches 0 
+
+
 
 ## Design and Prototyping 
 
