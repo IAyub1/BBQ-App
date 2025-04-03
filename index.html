@@ -1,33 +1,29 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <title>BBQ App</title>
-    <meta name="author" content="Ismael Ayub" />
-    <meta name="description" content="When is the best day to do a BBQ." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BBQ App</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <hr>
-        <h1>BBQ App</h1>
-        <hr>
-    </header>
+<div class="app-container">
+    <h1>BBQ App</h1>
 
-    <h2>17/03/2025</h2>
+    <!-- Location input -->
+    <div class="input-group">
+        <h2>Enter City</h2>
+        <input type="text" id="location-input" value="London" />
+        <button id="forecast-button">Check BBQ Forecast</button>
+    </div>
+    <!-- Timer input -->
+    <div class="input-group">
+        <h2>Timer</h2>
+        <input type="time" id="timer-input" value="05:00"/>
+        <button id="timer-button">Start Timer</button>
+    </div>
 
-    <section class="about_app">
-        <h3>About App</h3>
-        <p>
-            This is the BBQ App 
-        </p>
-    </section>
-
-    <footer>
-        <small>Copyright &#169; <cite>Ismael Ayub</cite></small>
-    </footer>
+</div>
+<script src="index.js"></script>
 </body>
-
 </html>
