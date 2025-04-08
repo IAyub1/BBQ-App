@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>BBQ App</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BBQ App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app-container">
+  <div class="app-container">
     <h1>BBQ App</h1>
 
-    <!-- Location input -->
     <div class="input-group">
-        <h2>Enter City</h2>
-        <input type="text" id="location-input" value="London" />
-        <button id="forecast-button">Check BBQ Forecast</button>
-    </div>
-    <!-- Timer input -->
-    <div class="input-group">
-        <h2>Timer</h2>
-        <input type="time" id="timer-input" value="05:00"/>
-        <button id="timer-button">Start Timer</button>
+      <h2>Enter City</h2>
+      <input type="text" id="location-input" value="London" />
+      <button id="forecast-button">Check BBQ Forecast</button>
     </div>
 
-</div>
-<script src="index.js"></script>
+    <div class="input-group">
+      <h2>Timer</h2>
+      <input type="time" id="timer-input" value="05:00"/>
+      <button id="timer-button">Start Timer</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+  <script>
+    // DOM logic here, calling functions from index.js
+    const API_KEY = '5ef53af545dd04589b5c843faae7edef';
+
+    document.getElementById("forecast-button").addEventListener("click", async () => {
+      const city = document.getElementById("location-input").value;
+      if (!city) {
+        alert("Please enter a city.");
+        return;
+      }
+
+      try {
+        const url = buildForecastURL(city, API_KEY);
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("City not found");
+
+        const data = await response.json();
+        const weatherData = extractForecastData(data);
+        localStorage.setItem("weatherData", JSON.stringify(weatherData));
+        window.location.href = "forecast.html";
+      } catch (err) {
+        alert("Failed to fetch weather. Please check the city name.");
+        console.error(err);
+      }
+    });
+
+    document.getElementById("timer-button").addEventListener("click", () => {
+      const time = document.getElementById("timer-input").value;
+      if (!time) {
+        alert("Please set a timer.");
+        return;
+      }
+      localStorage.setItem("timerValue", time);
+      window.location.href = "timer.html";
+    });
+  </script>
 </body>
 </html>
+
+```
