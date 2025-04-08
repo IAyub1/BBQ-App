@@ -1,0 +1,22 @@
+{
+  "name": "bbq-app",
+  "version": "1.0.0",
+  "description": "The purpose of this project is to focus on developing a user-friendly weather forecast application designed to help users plan their BBQs based on weather forecast information. The app will display a 5-day forecast in a simple and visually clear layout, helping users make better decisions about outdoor BBQ's.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAyub1/BBQ-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IAyub1/BBQ-App/issues"
+  },
+  "homepage": "https://github.com/IAyub1/BBQ-App#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
