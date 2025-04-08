@@ -71,6 +71,13 @@ Then the app should play a sound to notify me
 
 ## Design and Prototyping 
 
+Below is the screenshot of the connected figma prototype
+
+
+![Prototype](Images/Prototype.jpg)
+
+Below are individual mockup screens designed in Figma
+
 ![Homepage](Images/Homepage.jpg)
 ![5-day-BBQ-forecast](Images/5dayBBQforecast.jpg)
 ![Timer-countdown](Images/Timercountdown.jpg)
