@@ -71,9 +71,9 @@ Then the app should play a sound to notify me
 
 ## Design and Prototyping 
 
-![Homepage](Images\Homepage.jpg "Homepage")
-![5-day-BBQ-forecast](Images\5dayBBQforecast.jpg "5 day BBQ forecast")
-![Timer-countdown](Images\Timercountdown.jpg "Timer-Countdown")
+![Homepage](Images\Homepage.jpg)
+![5-day-BBQ-forecast](Images\5dayBBQforecast.jpg)
+![Timer-countdown](Images\Timercountdown.jpg)
 
 
 
