@@ -169,9 +169,11 @@ Finally, JavaScript was used to power the app’s functionality. Scripts handled
 Throughout the development process, I adopted a test first approach by writing unit tests using Jest, which are recorded in the index.test.js file. Jest, known for its fast execution and easy configuration, allowed me to  test the app’s logic functions. Writing tests early in development enabled me to catch and resolve potential issues quickly, which significantly improved the stability and dependability of the app. 
 
 **Example test**
+
 ![Test](Images/Test.jpg)
 
 **Test passed**
+
 ![passed](Images/passed.jpg)
 
 ### **Manual Test**
