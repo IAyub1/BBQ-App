@@ -11,7 +11,7 @@ describe('buildForecastURL', () => {
     });
   });
   
-  describe('extractForecastData', () => {
+describe('extractForecastData', () => {
     it('returns correct object from sample data', () => {
       const mockData = {
         list: [
