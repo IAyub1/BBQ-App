@@ -12,9 +12,25 @@ Author: Ismael Ayub
 
 Github Username: @IAyub1
 
-Preview app 
+### User Guide
 
-![Preview](Images/Preview.jpg)
+![UserGuide](Images/Preview.jpg)
+
+**Step 1: Enter City**
+- Click on the input box under "Enter City".
+- Type the name of your city (e.g., london).
+
+**Step 2: Check BBQ Forecast**
+- Click the "Check BBQ Forecast" button.
+- The app will fetch and display the latest 5-day weather forecast for your selected city.
+
+**Step 3: Set Timer**
+- Under the "Timer" section, click the timer field.
+- Set your desired countdown time for your BBQ session.
+
+**Step 4: Start Timer**
+- Once you’ve set the time, click the "Start Timer" button.
+- The app will start counting down and alert you when the time is up!
 
 The image displays the BBQ App web interface, where users can enter a city to check the BBQ weather forecast and use a built-in timer feature for their BBQ sessions.
 
@@ -169,9 +185,11 @@ Finally, JavaScript was used to power the app’s functionality. Scripts handled
 Throughout the development process, I adopted a test first approach by writing unit tests using Jest, which are recorded in the index.test.js file. Jest, known for its fast execution and easy configuration, allowed me to  test the app’s logic functions. Writing tests early in development enabled me to catch and resolve potential issues quickly, which significantly improved the stability and dependability of the app. 
 
 **Example test**
+#
 ![Test](Images/Test.jpg)
 
 **Test passed**
+
 ![passed](Images/passed.jpg)
 
 ### **Manual Test**
@@ -182,6 +200,6 @@ Manual testing was carried out to ensure the app responded correctly to invalid 
 
 ## Evaluation
 
-The development of the BBQ App was a success. It fulfilled all the core requirements, including providing accurate 5-day weather forecasts and offering a user-friendly countdown timer for BBQ sessions. Key strengths of the app included clear navigation between pages, an accessible interface with large text and distinct button colours, and an audible timer alert to notify users when the countdown finished. One of the main challenges during development was integrating the weather API and handling errors smoothly. Through thorough testing and debugging, especially focusing on handling invalid city inputs, this issue was successfully resolved, ensuring the app provides reliable feedback to the user.
+The development of the BBQ App met all the core requirements, including the provision of accurate 5-day weather forecasts and the integration of a user-friendly countdown timer for BBQ sessions. The app features clear navigation between pages, an accessible interface with large text and distinct button colours, and an audible timer alert to notify users when the countdown concludes. A significant challenge during development involved integrating the weather API and managing errors effectively. This was addressed through thorough testing and debugging, with particular attention to handling invalid city inputs, resulting in reliable feedback for the user.
 
 When the app was tested by users, feedback was overwhelmingly positive. Users appreciated the simplicity of the design and found the app intuitive to use. They highlighted that the visual forecast made it easy to plan BBQ days, and the timer feature was practical for managing cooking times. However, some users suggested improvements to input validation, as currently, the app allows any text input for the city field, which can cause errors if the input does not match a valid location. For future iterations, enhanced validation will be implemented to guide users towards entering valid city names. Additionally, planned improvements include providing suggestions or auto-complete for city entries to further improve usability, and potentially integrating more detailed weather data, such as temperature and wind speed, to give users an intuitive experience.
