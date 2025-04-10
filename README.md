@@ -14,7 +14,7 @@ Github Username: @IAyub1
 
 ### User Guide
 
-![UserGuide](Images/Preview.jpg)
+![UserGuide](Images/UserGuide.jpg)
 
 **Step 1: Enter City**
 - Click on the input box under "Enter City".
